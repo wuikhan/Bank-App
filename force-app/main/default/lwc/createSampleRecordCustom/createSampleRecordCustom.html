@@ -1,0 +1,40 @@
+<template>
+  <lightning-card title="Create Sample">
+    <lightning-layout>
+      <lightning-layout-item size="6" padding="around-small">
+        <lightning-card title="Create a Sample">
+          <lightning-input
+            name="Sample Name"
+            id="demo"
+            label="Sample Name"
+            onchange={sampleNameChangeHandler}
+          ></lightning-input>
+          <lightning-input
+            name="First Name"
+            label="First Name"
+            onchange={firstNameChangeHandler}
+          ></lightning-input>
+          <lightning-button
+            label="Create Sample"
+            variant="brand"
+            onclick={createSample}
+          ></lightning-button>
+        </lightning-card>
+      </lightning-layout-item>
+      <lightning-layout-item size="6" padding="around-small">
+        <lightning-card title="View Sample">
+          <p>
+            <lightning-formatted-text
+              value={retrievedSampleText}
+            ></lightning-formatted-text>
+          </p>
+          <p>
+            <lightning-formatted-text
+              value={retrievedNameText}
+            ></lightning-formatted-text>
+          </p>
+        </lightning-card>
+      </lightning-layout-item>
+    </lightning-layout>
+  </lightning-card>
+</template>

@@ -1,0 +1,22 @@
+<aura:component
+  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction"
+  access="global"
+>
+  <aura:attribute name="whom" type="String" default="String Type" />
+  <aura:attribute
+    name="favoriteColors"
+    type="String[]"
+    default="['cyan', 'yellow', 'magenta']"
+  />
+
+  <lightning:card>
+    <lightning:layout>
+      <lightning:layoutItem>
+        <p>{!v.whom}</p>
+        <aura:iteration items="{!v.favoriteColors}" var="s">
+          <p>{!s}</p>
+        </aura:iteration>
+      </lightning:layoutItem>
+    </lightning:layout>
+  </lightning:card>
+</aura:component>

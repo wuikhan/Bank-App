@@ -1,0 +1,27 @@
+<template>
+    <div class="slds-box">
+        <p>using for each loop</p>
+        <ul>
+            <template for:each={students} for:item="student">
+                <li key={student.Id}>
+                    {student.studentName}
+                    {student.age}
+                </li>
+            </template>
+        </ul>
+    </div>
+    <br>
+    <div class="slds-box">
+        <p>using iterator</p>
+        <ul>
+            <template iterator:it={students}>
+                <li key={it.value.Id}>
+                    <div if:true={it.first} style="border-top: 1px solid white;"></div>
+                    {it.value.studentName}
+                    {it.value.age}
+                    <div if:true={it.last} style="border-bottom: 1px solid white;"></div>
+                </li>
+            </template>
+        </ul>
+    </div>
+</template>

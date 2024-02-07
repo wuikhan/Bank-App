@@ -1,0 +1,9 @@
+<template>
+  <lightning-layout multiple-rows>
+    <template for:each={vehicles} for:item="vehicle">
+      <lightning-layout-item padding="around-small" key={vehicle.vim} size="4">
+        <c-inventory-card vehicle={vehicle}></c-inventory-card>
+      </lightning-layout-item>
+    </template>
+  </lightning-layout>
+</template>

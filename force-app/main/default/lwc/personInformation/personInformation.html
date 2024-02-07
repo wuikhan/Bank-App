@@ -1,0 +1,9 @@
+<template>
+  <lightning-layout multiple-rows>
+    <template for:each={students} for:item="student">
+      <lightning-layout-item padding="around-small" key={student.ssn} size="4">
+        <c-person student={student}></c-person>
+      </lightning-layout-item>
+    </template>
+  </lightning-layout>
+</template>

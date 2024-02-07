@@ -1,0 +1,9 @@
+<template>
+  <lightning-card title={vehicle.title}>
+    <lightning-badge label={vehicle.status} class={vehicle.statusbadge} slot="actions"></lightning-badge>
+    <image src={vehicle.imageUrl}></image>
+    <p class="slds-var-p-horizontal_small"><b>{vehicle.title}</b></p>
+    <p class="slds-var-p-horizontal_small">Price : {vehicle.packageNo}</p>
+    <p class="slds-var-p-horizontal_small">Vin # {vehicle.vin}</p>
+  </lightning-card>
+</template>

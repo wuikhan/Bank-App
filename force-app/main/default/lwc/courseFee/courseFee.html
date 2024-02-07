@@ -1,0 +1,9 @@
+<template>
+    <div class="slds-p-around_medium lgc-bg">
+        <lightning-input type="text" label="Course Name" value={courseName} onchange={changeCourseName}></lightning-input>
+        <lightning-input type="number" label="Course Fee" value={courseFee} onchange={changeCourseFee}></lightning-input>
+        <lightning-input type="number" label="Number Of Students" value={numberOfStudents} onchange={changeNumberOfStudents}></lightning-input>
+        <lightning-button variant="brand" onclick={calculateTotal} label="Total Course Fee" title="Total Course Fee" icon-name="utility:download" class="slds-m-left_x-small"></lightning-button>
+    <p>my total course fee {totalCourseFee}</p>
+    </div>
+</template>

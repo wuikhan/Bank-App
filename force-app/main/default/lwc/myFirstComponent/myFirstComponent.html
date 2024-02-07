@@ -1,0 +1,50 @@
+<template>
+  <div class="slds-box">
+    <lightning-input
+      type="number"
+      onchange={firstInputChange}
+      value={firstInput}
+      name="firstValue"
+      label="First Value"
+      placeholder="e.g 100"
+    >
+    </lightning-input>
+
+    <lightning-input
+      type="number"
+      onchange={secondInputChange}
+      value={secondInput}
+      name="secondValue"
+      label="Second Value"
+      placeholder="e.g 200"
+    >
+    </lightning-input>
+
+    <lightning-button-group>
+      <lightning-button
+        variant="brand"
+        label="Add"
+        onclick={add}
+      ></lightning-button>
+      <lightning-button
+        variant="brand"
+        label="Subtract"
+        onclick={subtract}
+      ></lightning-button>
+      <lightning-button
+        variant="brand"
+        label="Multiply"
+        onclick={multiply}
+      ></lightning-button>
+      <lightning-button
+        variant="brand"
+        label="Division"
+        onclick={division}
+      ></lightning-button>
+    </lightning-button-group>
+
+    <template if:true={showTotal}>
+      <p>The result is : {finalValue}</p>
+    </template>
+  </div>
+</template>
